@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="title"></title>
+    <!-- for local development -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="esps.css">
+</head>
+
+<body>
+    <div>
+    </div>
+    <table border="1" class="table esps-table" id="pwmtable">
+        <colgroup>
+            <col class="col-sm-offset-2 col-sm-1">
+            <col class="col-sm-1">
+            <col class="col-sm-1">
+            <col class="col-sm-1">
+            <col class="col-sm-5">
+        </colgroup>
+        <thead>
+            <tr>
+                <th class="text-center" sope="col">GPIO</th>
+                <th class="text-center" sope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="pwmtbody">
+            <tr>
+                <td>
+                    D0/16
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('16', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('16', '-')">-10</button>
+                        <span id="count_16">0</span>
+                        <button class="action-btn" onclick="setPWM('16', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('16', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D5/14
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('14', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('14', '-')">-10</button>
+                        <span id="count_14">0</span>
+                        <button class="action-btn" onclick="setPWM('14', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('14', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D6/12
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('12', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('12', '-')">-10</button>
+                        <span id="count_12">0</span>
+                        <button class="action-btn" onclick="setPWM('12', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('12', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D7/13
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('13', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('13', '-')">-10</button>
+                        <span id="count_13">0</span>
+                        <button class="action-btn" onclick="setPWM('13', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('13', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D3/00
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('00', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('00', '-')">-10</button>
+                        <span id="count_00">0</span>
+                        <button class="action-btn" onclick="setPWM('00', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('00', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D2/04
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('04', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('04', '-')">-10</button>
+                        <span id="count_04">0</span>
+                        <button class="action-btn" onclick="setPWM('04', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('04', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D1/05
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('05', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('05', '-')">-10</button>
+                        <span id="count_05">0</span>
+                        <button class="action-btn" onclick="setPWM('05', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('05', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    D8/15
+                </td>
+                <td>
+                    <div class="action-div">
+                        <button class="action-btn" onclick="setPWM('15', '0')">0</button>
+                        <button class="action-btn" onclick="setPWM('15', '-')">-10</button>
+                        <span id="count_15">0</span>
+                        <button class="action-btn" onclick="setPWM('15', '+')">+10</button>
+                        <button class="action-btn" onclick="setPWM('15', '255')">255</button>
+                        <span class="stretch"></span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- for local development -->
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jqColorPicker.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript" src="esps.js"></script>
+    <script>
+        wsConnect();
+    </script>
+</body>
